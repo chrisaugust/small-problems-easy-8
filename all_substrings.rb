@@ -50,7 +50,7 @@ def substrings(str)
   characters = str.split('')
   characters.each_with_index do |c,i|
     substrings = []
-    (i..characters.length).each_with_index do |_, j|
+    (i..characters.length-1).each_with_index do |_, j|
       substrings << characters.slice(i, j+1).join('')
     end 
     all_substrings << substrings
